@@ -1476,6 +1476,26 @@
             100% { transform: translateX(-100%); }
         }
     </style>
+<style>
+#chat-box{width:min(340px,calc(100vw - 24px));right:12px;bottom:158px;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}
+#chat-btn{right:14px}
+#chat-box .chat-header,#chat-box .chat-input-area{flex-shrink:0}
+#chat-box .chat-messages{min-height:90px;max-height:none}
+#chat-box .chat-suggestions{flex-wrap:nowrap;overflow-x:auto;flex-shrink:0}
+#chat-box .chat-sugg{white-space:nowrap;flex-shrink:0}
+.chat-send-btn{min-width:38px}
+.chat-header-info div span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#4cd964;margin-right:6px}
+@media (max-height:560px){#chat-box{bottom:84px;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px)}#chat-box .chat-suggestions{display:none}}
+.hero-cover{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.32;z-index:0;display:block}
+.hero>*:not(.hero-cover){position:relative;z-index:1}
+.menu-panel{padding-bottom:70px}
+@media (max-width:640px){
+ .menu-tabs{flex-direction:column;margin:20px 12px 0;max-width:none}
+ .theme-grid{padding:24px 12px;gap:16px;grid-template-columns:1fr}
+ .theme-card-body{padding:16px}
+ .theme-card-body h3,.theme-card-body p{overflow-wrap:anywhere}
+}
+</style>
 <style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
 </head>
 <body>
@@ -1487,23 +1507,23 @@
         <span>AYH BELIEVE</span>
     </div>
     <ul>
-        <li><a href="index.html" class="active">🏠 Accueil</a></li>
-        <li><a href="blog.html">📰 Blog</a></li>
-        <li><a href="blog-tech.html">🤖 Tech & IA</a></li>
-        <li><a href="sciences.html">🔬 Sciences</a></li>
-        <li><a href="agriculture.html">🌾 Agriculture</a></li>
-        <li><a href="contact.html">📬 Contact</a></li>
+        <li><a href="index.html" class="active"> Accueil</a></li>
+        <li><a href="blog.html"> Blog</a></li>
+        <li><a href="blog-tech.html"> Tech & IA</a></li>
+        <li><a href="sciences.html"> Sciences</a></li>
+        <li><a href="agriculture.html"> Agriculture</a></li>
+        <li><a href="contact.html"> Contact</a></li>
         <!-- Dropdown pour les autres pages -->
         <li class="nav-dropdown">
             <button class="nav-dropdown-btn">Plus ▾</button>
             <div class="nav-dropdown-menu">
-                <a href="partenaires.html">🤝 Partenaires</a>
-                <a href="apropos.html">👤 À Propos</a>
-                <a href="formation.html">🎓 Formation</a>
-                <a href="confidentialite.html">🔒 Confidentialité</a>
+                <a href="partenaires.html"> Partenaires</a>
+                <a href="apropos.html"> À Propos</a>
+                <a href="formation.html"> Formation</a>
+                <a href="confidentialite.html"> Confidentialité</a>
             </div>
         </li>
-        <li><a href="soutenir.html" style="background:var(--rouge);color:white;border-radius:16px;">🤝 Soutenir</a></li>
+        <li><a href="soutenir.html" style="background:var(--rouge);color:white;border-radius:16px;"> Soutenir</a></li>
     </ul>
     <!-- Bouton hamburger mobile -->
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1514,24 +1534,24 @@
 <!-- Menu mobile déroulant -->
 <div class="nav-mobile" id="nav-mobile">
     <ul>
-        <li><a href="index.html" class="active" onclick="closeMenu()">🏠 Accueil</a></li>
-        <li><a href="blog.html" onclick="closeMenu()">📰 Blog</a></li>
-        <li><a href="blog-tech.html" onclick="closeMenu()">🤖 Blog Tech & IA</a></li>
-        <li><a href="sciences.html" onclick="closeMenu()">🔬 Sciences</a></li>
-        <li><a href="agriculture.html" onclick="closeMenu()">🌾 Agriculture</a></li>
-        <li><a href="partenaires.html" onclick="closeMenu()">🤝 Partenaires</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">📬 Contact</a></li>
-        <li><a href="apropos.html" onclick="closeMenu()">👤 À Propos</a></li>
-        <li><a href="formation.html" onclick="closeMenu()">🎓 Formation</a></li>
-        <li><a href="confidentialite.html" onclick="closeMenu()">🔒 Confidentialité</a></li>
+        <li><a href="index.html" class="active" onclick="closeMenu()"> Accueil</a></li>
+        <li><a href="blog.html" onclick="closeMenu()"> Blog</a></li>
+        <li><a href="blog-tech.html" onclick="closeMenu()"> Blog Tech & IA</a></li>
+        <li><a href="sciences.html" onclick="closeMenu()"> Sciences</a></li>
+        <li><a href="agriculture.html" onclick="closeMenu()"> Agriculture</a></li>
+        <li><a href="partenaires.html" onclick="closeMenu()"> Partenaires</a></li>
+        <li><a href="contact.html" onclick="closeMenu()"> Contact</a></li>
+        <li><a href="apropos.html" onclick="closeMenu()"> À Propos</a></li>
+        <li><a href="formation.html" onclick="closeMenu()"> Formation</a></li>
+        <li><a href="confidentialite.html" onclick="closeMenu()"> Confidentialité</a></li>
     </ul>
-    <a href="soutenir.html" class="don-btn-mobile" onclick="closeMenu()">🤝 Soutenir le site</a>
+    <a href="soutenir.html" class="don-btn-mobile" onclick="closeMenu()"> Soutenir le site</a>
 </div>
 
 <!-- ===== TICKER AFFILIATION ===== -->
 <div class="affil-ticker">
     <span class="affil-ticker-inner">
-        🛒 JUMIA — E-commerce en Afrique &nbsp;&nbsp;★&nbsp;&nbsp; 🏨 BOOKING.COM — Hôtels au Togo et dans le monde &nbsp;&nbsp;★&nbsp;&nbsp; 📦 AMAZON — Livraison internationale &nbsp;&nbsp;★&nbsp;&nbsp; 🎨 CANVA — Design facile &nbsp;&nbsp;★&nbsp;&nbsp; 🌐 HOSTINGER — Hébergement web &nbsp;&nbsp;★&nbsp;&nbsp; 🤝 Liens partenaires : merci de soutenir AYH BELIEVE IN GOD ! 🇹🇬
+         JUMIA — E-commerce en Afrique &nbsp;&nbsp;★&nbsp;&nbsp;  BOOKING.COM — Hôtels au Togo et dans le monde &nbsp;&nbsp;★&nbsp;&nbsp;  AMAZON — Livraison internationale &nbsp;&nbsp;★&nbsp;&nbsp;  CANVA — Design facile &nbsp;&nbsp;★&nbsp;&nbsp;  HOSTINGER — Hébergement web &nbsp;&nbsp;★&nbsp;&nbsp;  Liens partenaires : merci de soutenir AYH BELIEVE IN GOD ! 
     </span>
 </div>
 
@@ -1765,7 +1785,7 @@
             <p>Je souhaite un Togo où chacun peut s'exprimer librement et pacifiquement, où les institutions sont solides et contrôlées, et où les richesses du pays se traduisent en écoles, en hôpitaux et en emplois. Ce chemin passe par le dialogue, le respect du droit et la participation de tous.</p>
             <p style="font-size:0.85rem;color:#666;">Pour aller plus loin : <a href="https://britannica.com/biography/Gnassingbe-Eyadema" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Britannica (Gnassingbé Eyadéma)</a> · <a href="https://fr.africanews.com/2026/07/27/togo-mobilisation-de-lopposition-contre-la-constitution-adoptee-en-2024/" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Africanews (27 juillet 2026)</a>.</p>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1791,7 +1811,7 @@
             <h3>L'enseignant — le plus lésé</h3>
             <p>L'enseignant est particulièrement à plaindre : aucune dignité accordée par les autorités. Dès le début du mois, l'enseignant pense déjà au suivant car son fonds est déjà épuisé sous le coup des dettes. Au Togo, un fonctionnaire est comme un arbre fruitier dont tout le monde s'adosse pour se satisfaire — en quelque sorte la vache à lait de toute la famille.</p>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1819,7 +1839,7 @@
             <p>Le changement durable commence par nous : s'informer auprès de sources fiables, s'éduquer à la citoyenneté, soutenir des médias et des associations indépendants, et unir la diaspora et les Togolais de l'intérieur autour d'objectifs clairs, légaux et non violents. Le recours à la force n'apporterait que de nouvelles souffrances à un peuple qui en a déjà beaucoup connu : la paix et le droit restent notre meilleure arme.</p>
             <p style="font-size:0.85rem;color:#666;">Pour aller plus loin : <a href="https://fr.africanews.com/2026/07/27/togo-mobilisation-de-lopposition-contre-la-constitution-adoptee-en-2024/" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Africanews (27 juillet 2026)</a> · <a href="https://issafrica.org/fr/iss-today/l-absence-de-consensus-sur-les-reformes-constitutionnelles-accentue-les-tensions-au-togo" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">ISS Africa</a>.</p>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1842,7 +1862,7 @@
             <p>Le Togo, un petit pays de l'Afrique de l'Ouest, pourrait prétendre être prospère, mais les dirigeants l'ont pris en otage. Les habitants de Kamina, eux, n'ont jamais baissé les bras. Ils cultivent la terre, élèvent leurs enfants dans la foi et la dignité, et gardent l'espoir d'un lendemain meilleur.</p>
             <p>Kamina, c'est plus qu'un village — c'est une âme, une identité, un héritage que nous portons fièrement partout où nous allons dans le monde.</p>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1868,7 +1888,7 @@
             <p>Malgré cela, de nombreux jeunes togolais font preuve d'une résilience remarquable, créant leurs propres entreprises et s'inscrivant dans l'économie informelle pour subvenir à leurs besoins et ceux de leur famille.</p>
 			<img src="jeune.png" alt="jeune" style="width:100%;height:auto;display:block;"/>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1893,7 +1913,7 @@
             <p>D'ailleurs dans l'ancienneté et dans la longue continuation d'une puissance, la mémoire des précédentes innovations s'efface ; les causes qui les avaient produites s'évanouissent : il n'y a donc plus de ces sortes de pierres d'attente qu'une révolution laisse toujours pour en appuyer une seconde.</p>
             <p style="font-style:italic;color:#888;margin-top:20px;">— Nicolas Machiavel, Le Prince (1515)</p>
         </div>
-        <div class="modal-author">✍️ Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
+        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
     </div>
 </div>
 
@@ -1930,12 +1950,12 @@
         </div>
         <div class="footer-col">
             <h4>Contact</h4>
-            <p>📍 Kamina, Est Mono — TOGO</p>
-            <p>✉️ zakoszak747@gmail.com</p>
+            <p> Kamina, Est Mono — TOGO</p>
+            <p> zakoszak747@gmail.com</p>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 AYH BELIEVE IN GOD — Conçu avec <span>❤️</span> par <strong style="color:var(--jaune);">Honoré Yaovi</strong> — Kamina, TOGO 🇹🇬</p>
+        <p>© 2026 AYH BELIEVE IN GOD — Conçu avec <span></span> par <strong style="color:var(--jaune);">Honoré Yaovi</strong> — Kamina, TOGO </p>
     </div>
 </footer>
 
@@ -1943,9 +1963,7 @@
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
 
 <!-- ===== CHAT POPUP ===== -->
-<button id="chat-btn" onclick="toggleChat()">
-    💬
-    <span class="chat-notif">1</span>
+<button id="chat-btn" onclick="toggleChat()"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg><span class="chat-notif">1</span>
 </button>
 
 <div id="chat-box">
@@ -1954,28 +1972,28 @@
             <div class="chat-avatar">AY</div>
             <div>
                 <h4>AYH Support</h4>
-                <span>🟢 En ligne maintenant</span>
+                <span> En ligne maintenant</span>
             </div>
         </div>
         <button class="chat-close-btn" onclick="toggleChat()">✕</button>
     </div>
     <div class="chat-messages" id="chat-messages">
         <div class="msg bot">
-            👋 Bonjour ! Je suis l'assistant AYH BELIEVE IN GOD. Comment puis-je vous aider aujourd'hui ?
+             Bonjour ! Je suis l'assistant AYH BELIEVE IN GOD. Comment puis-je vous aider aujourd'hui ?
         </div>
         <div class="msg bot">
-            Vous pouvez me poser des questions sur le Togo, l'agriculture, les sciences ou découvrir comment soutenir le site 🙏
+            Vous pouvez me poser des questions sur le Togo, l'agriculture, les sciences ou découvrir comment soutenir le site 
         </div>
     </div>
     <div class="chat-suggestions">
-        <button class="chat-sugg" onclick="sendSugg('En savoir plus sur le Togo')">🇹🇬 Le Togo</button>
-        <button class="chat-sugg" onclick="sendSugg('Comment soutenir le site ?')">🤝 Soutenir</button>
-        <button class="chat-sugg" onclick="sendSugg('Parlez-moi de l\'agriculture togolaise')">🌾 Agriculture</button>
-        <button class="chat-sugg" onclick="sendSugg('Contactez-nous')">📬 Contact</button>
+        <button class="chat-sugg" onclick="sendSugg('En savoir plus sur le Togo')"> Le Togo</button>
+        <button class="chat-sugg" onclick="sendSugg('Comment soutenir le site ?')"> Soutenir</button>
+        <button class="chat-sugg" onclick="sendSugg('Parlez-moi de l\'agriculture togolaise')"> Agriculture</button>
+        <button class="chat-sugg" onclick="sendSugg('Contactez-nous')"> Contact</button>
     </div>
     <div class="chat-input-area">
         <input type="text" id="chat-input" placeholder="Écrivez un message..." onkeypress="if(event.key==='Enter')sendChat()" />
-        <button class="chat-send-btn" onclick="sendChat()">➤</button>
+        <button class="chat-send-btn" onclick="sendChat()" aria-label="Envoyer"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></button>
     </div>
 </div>
 
@@ -2004,12 +2022,12 @@
     // ===== CHAT POPUP =====
     let chatOpen = false;
     const chatResponses = {
-        'togo': '🇹🇬 Le Togo est un pays d\'Afrique de l\'Ouest de 56 600 km² avec environ 8 millions d\'habitants. Situé entre le Ghana et le Bénin, c\'est un pays riche en culture et en histoire.',
-        'don': '🤝 Pour soutenir le site, ouvrez la page "🤝 Soutenir" dans le menu : partager nos articles, nous écrire ou utiliser nos liens partenaires. Merci ! 🙏',
-        'agriculture': '🌾 L\'agriculture togolaise est riche ! Le maïs, le manioc, l\'igname et le karité sont les cultures principales. Visitez notre page Agriculture pour en savoir plus !',
-        'contact': '📬 Vous pouvez nous contacter à : zakoszak747@gmail.com\n📍 Kamina, Est Mono, TOGO',
-        'science': '🔬 Notre page Sciences couvre les sciences générales, les innovations africaines et l\'environnement. Le Togo a beaucoup à apporter au monde scientifique !',
-        'default': '🙏 Merci pour votre message ! Pour plus d\'informations, n\'hésitez pas à visiter nos pages ou à nous écrire à zakoszak747@gmail.com. Dieu vous bénisse ! 🇹🇬'
+        'togo': ' Le Togo est un pays d\'Afrique de l\'Ouest de 56 600 km² avec environ 8 millions d\'habitants. Situé entre le Ghana et le Bénin, c\'est un pays riche en culture et en histoire.',
+        'don': ' Pour soutenir le site, ouvrez la page " Soutenir" dans le menu : partager nos articles, nous écrire ou utiliser nos liens partenaires. Merci ! ',
+        'agriculture': ' L\'agriculture togolaise est riche ! Le maïs, le manioc, l\'igname et le karité sont les cultures principales. Visitez notre page Agriculture pour en savoir plus !',
+        'contact': ' Vous pouvez nous contacter à : zakoszak747@gmail.com\n Kamina, Est Mono, TOGO',
+        'science': ' Notre page Sciences couvre les sciences générales, les innovations africaines et l\'environnement. Le Togo a beaucoup à apporter au monde scientifique !',
+        'default': ' Merci pour votre message ! Pour plus d\'informations, n\'hésitez pas à visiter nos pages ou à nous écrire à zakoszak747@gmail.com. Dieu vous bénisse ! '
     };
 
     function toggleChat() {
@@ -2179,6 +2197,8 @@
     function credit(title, p) {
         var ul = document.getElementById('photo-credits-list'), box = document.getElementById('photo-credits');
         if (!ul || !box) return;
+        window.__ayhSeen = window.__ayhSeen || {};
+        if (window.__ayhSeen[p.page]) return; window.__ayhSeen[p.page] = 1;
         var li = document.createElement('li'), a = document.createElement('a');
         a.href = p.page; a.target = '_blank'; a.rel = 'noopener'; a.textContent = title;
         a.style.cssText = 'color:var(--vert);font-weight:700;';

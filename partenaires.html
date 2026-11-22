@@ -1476,6 +1476,27 @@
             100% { transform: translateX(-100%); }
         }
     </style>
+<style>
+#chat-box{width:min(340px,calc(100vw - 24px));right:12px;bottom:158px;max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}
+#chat-btn{right:14px}
+#chat-box .chat-header,#chat-box .chat-input-area{flex-shrink:0}
+#chat-box .chat-messages{min-height:90px;max-height:none}
+#chat-box .chat-suggestions{flex-wrap:nowrap;overflow-x:auto;flex-shrink:0}
+#chat-box .chat-sugg{white-space:nowrap;flex-shrink:0}
+.chat-send-btn{min-width:38px}
+.chat-header-info div span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#4cd964;margin-right:6px}
+@media (max-height:560px){#chat-box{bottom:84px;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px)}#chat-box .chat-suggestions{display:none}}
+.hero-cover{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.32;z-index:0;display:block}
+.hero>*:not(.hero-cover){position:relative;z-index:1}
+.menu-panel{padding-bottom:70px}
+@media (max-width:640px){
+ .menu-tabs{flex-direction:column;margin:20px 12px 0;max-width:none}
+ .theme-grid{padding:24px 12px;gap:16px;grid-template-columns:1fr}
+ .theme-card-body{padding:16px}
+ .theme-card-body h3,.theme-card-body p{overflow-wrap:anywhere}
+}
+</style>
+<style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
 </head>
 <body>
 
@@ -1486,23 +1507,23 @@
         <span>AYH BELIEVE</span>
     </div>
     <ul>
-        <li><a href="index.html" class="active">🏠 Accueil</a></li>
-        <li><a href="blog.html">📰 Blog</a></li>
-        <li><a href="blog-tech.html">🤖 Tech & IA</a></li>
-        <li><a href="sciences.html">🔬 Sciences</a></li>
-        <li><a href="agriculture.html">🌾 Agriculture</a></li>
-        <li><a href="contact.html">📬 Contact</a></li>
+        <li><a href="index.html" class="active"> Accueil</a></li>
+        <li><a href="blog.html"> Blog</a></li>
+        <li><a href="blog-tech.html"> Tech & IA</a></li>
+        <li><a href="sciences.html"> Sciences</a></li>
+        <li><a href="agriculture.html"> Agriculture</a></li>
+        <li><a href="contact.html"> Contact</a></li>
         <!-- Dropdown pour les autres pages -->
         <li class="nav-dropdown">
             <button class="nav-dropdown-btn">Plus ▾</button>
             <div class="nav-dropdown-menu">
-                <a href="partenaires.html">🤝 Partenaires</a>
-                <a href="apropos.html">👤 À Propos</a>
-                <a href="formation.html">🎓 Formation</a>
-                <a href="confidentialite.html">🔒 Confidentialité</a>
+                <a href="partenaires.html"> Partenaires</a>
+                <a href="apropos.html"> À Propos</a>
+                <a href="formation.html"> Formation</a>
+                <a href="confidentialite.html"> Confidentialité</a>
             </div>
         </li>
-        <li><a href="soutenir.html" style="background:var(--rouge);color:white;border-radius:16px;">🤝 Soutenir</a></li>
+        <li><a href="soutenir.html" style="background:var(--rouge);color:white;border-radius:16px;"> Soutenir</a></li>
     </ul>
     <!-- Bouton hamburger mobile -->
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -1513,31 +1534,31 @@
 <!-- Menu mobile déroulant -->
 <div class="nav-mobile" id="nav-mobile">
     <ul>
-        <li><a href="index.html" class="active" onclick="closeMenu()">🏠 Accueil</a></li>
-        <li><a href="blog.html" onclick="closeMenu()">📰 Blog</a></li>
-        <li><a href="blog-tech.html" onclick="closeMenu()">🤖 Blog Tech & IA</a></li>
-        <li><a href="sciences.html" onclick="closeMenu()">🔬 Sciences</a></li>
-        <li><a href="agriculture.html" onclick="closeMenu()">🌾 Agriculture</a></li>
-        <li><a href="partenaires.html" onclick="closeMenu()">🤝 Partenaires</a></li>
-        <li><a href="contact.html" onclick="closeMenu()">📬 Contact</a></li>
-        <li><a href="apropos.html" onclick="closeMenu()">👤 À Propos</a></li>
-        <li><a href="formation.html" onclick="closeMenu()">🎓 Formation</a></li>
-        <li><a href="confidentialite.html" onclick="closeMenu()">🔒 Confidentialité</a></li>
+        <li><a href="index.html" class="active" onclick="closeMenu()"> Accueil</a></li>
+        <li><a href="blog.html" onclick="closeMenu()"> Blog</a></li>
+        <li><a href="blog-tech.html" onclick="closeMenu()"> Blog Tech & IA</a></li>
+        <li><a href="sciences.html" onclick="closeMenu()"> Sciences</a></li>
+        <li><a href="agriculture.html" onclick="closeMenu()"> Agriculture</a></li>
+        <li><a href="partenaires.html" onclick="closeMenu()"> Partenaires</a></li>
+        <li><a href="contact.html" onclick="closeMenu()"> Contact</a></li>
+        <li><a href="apropos.html" onclick="closeMenu()"> À Propos</a></li>
+        <li><a href="formation.html" onclick="closeMenu()"> Formation</a></li>
+        <li><a href="confidentialite.html" onclick="closeMenu()"> Confidentialité</a></li>
     </ul>
-    <a href="soutenir.html" class="don-btn-mobile" onclick="closeMenu()">🤝 Soutenir le site</a>
+    <a href="soutenir.html" class="don-btn-mobile" onclick="closeMenu()"> Soutenir le site</a>
 </div>
 
 <!-- ===== TICKER AFFILIATION ===== -->
 <div class="affil-ticker">
     <span class="affil-ticker-inner">
-        🛒 JUMIA — E-commerce en Afrique &nbsp;&nbsp;★&nbsp;&nbsp; 🏨 BOOKING.COM — Hôtels au Togo et dans le monde &nbsp;&nbsp;★&nbsp;&nbsp; 📦 AMAZON — Livraison internationale &nbsp;&nbsp;★&nbsp;&nbsp; 🎨 CANVA — Design facile &nbsp;&nbsp;★&nbsp;&nbsp; 🌐 HOSTINGER — Hébergement web &nbsp;&nbsp;★&nbsp;&nbsp; 🤝 Liens partenaires : merci de soutenir AYH BELIEVE IN GOD ! 🇹🇬
+         JUMIA — E-commerce en Afrique &nbsp;&nbsp;★&nbsp;&nbsp;  BOOKING.COM — Hôtels au Togo et dans le monde &nbsp;&nbsp;★&nbsp;&nbsp;  AMAZON — Livraison internationale &nbsp;&nbsp;★&nbsp;&nbsp;  CANVA — Design facile &nbsp;&nbsp;★&nbsp;&nbsp;  HOSTINGER — Hébergement web &nbsp;&nbsp;★&nbsp;&nbsp;  Liens partenaires : merci de soutenir AYH BELIEVE IN GOD ! 
     </span>
 </div>
 
 <!-- ===== PAGE ACCUEIL ===== -->
 <div id="affiliation" class="page active">
     <div class="page-hero" style="background:linear-gradient(135deg,#e65100,#880e4f,#000);">
-        <h1>🤝 Nos Partenaires</h1>
+        <h1>Nos Partenaires</h1>
         <p>Services et plateformes que nous recommandons</p>
     </div>
     <div class="togo-strip"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span><span class="s5"></span></div>
@@ -1546,7 +1567,7 @@
 
         <!-- Intro -->
         <div style="background:white;border-radius:16px;padding:25px;margin-bottom:30px;box-shadow:0 4px 15px var(--ombre);border-left:5px solid var(--jaune);">
-            <h2 style="color:var(--vert);margin-bottom:10px;">💰 Comment ça marche ?</h2>
+            <h2 style="color:var(--vert);margin-bottom:10px;"> Comment ça marche ?</h2>
             <p style="color:#555;line-height:1.8;">Cliquez sur un lien partenaire, achetez un produit ou service, et <strong>AYH BELIEVE IN GOD reçoit une commission</strong> qui finance notre mission pour le peuple togolais. <strong>Aucun coût supplémentaire pour vous !</strong></p>
         </div>
 
@@ -1554,34 +1575,30 @@
         <h2 class="section-title">Nos Partenaires</h2>
         <div class="partners-grid">
             <a class="partner-card" href="https://www.jumia.com.gh/?utm_source=ayh&utm_medium=affiliation" target="_blank" rel="noopener">
-                <span class="p-icon">🛒</span>
+                <span class="p-icon" style="position:relative;overflow:hidden;height:90px;border-radius:10px;"><img class="theme-photo" src="partner-jumia.jpg" alt="Jumia" loading="lazy" data-q="online shopping Africa market|shopping bags|e-commerce parcel delivery" onerror="ayhPhoto(this)"></span>
                 <h4>Jumia</h4>
                 <p>E-commerce Afrique</p>
             </a>
             <a class="partner-card" href="https://www.booking.com/" target="_blank" rel="noopener" style="border-top-color:#003580;">
-                <span class="p-icon">🏨</span>
+                <span class="p-icon" style="position:relative;overflow:hidden;height:90px;border-radius:10px;"><img class="theme-photo" src="partner-booking.jpg" alt="Booking" loading="lazy" data-q="hotel room|hotel lobby|resort hotel" onerror="ayhPhoto(this)"></span>
                 <h4>Booking.com</h4>
                 <p>Hôtels & Séjours</p>
-                <span class="p-comm" style="background:#003580;color:white;">25–40%</span>
             </a>
             <a class="partner-card" href="https://www.amazon.fr/" target="_blank" rel="noopener" style="border-top-color:#ff9900;">
-                <span class="p-icon">📦</span>
+                <span class="p-icon" style="position:relative;overflow:hidden;height:90px;border-radius:10px;"><img class="theme-photo" src="partner-amazon.jpg" alt="Amazon" loading="lazy" data-q="delivery parcels boxes|cardboard boxes package|warehouse parcels" onerror="ayhPhoto(this)"></span>
                 <h4>Amazon</h4>
                 <p>Produits mondiaux</p>
-                <span class="p-comm" style="background:#ff9900;color:#333;">1–10%</span>
             </a>
 
             <a class="partner-card" href="https://www.canva.com/" target="_blank" rel="noopener" style="border-top-color:#7d2ae8;">
-                <span class="p-icon">🎨</span>
+                <span class="p-icon" style="position:relative;overflow:hidden;height:90px;border-radius:10px;"><img class="theme-photo" src="partner-canva.jpg" alt="Canva" loading="lazy" data-q="graphic designer desk|design studio computer|creative workspace" onerror="ayhPhoto(this)"></span>
                 <h4>Canva</h4>
                 <p>Design graphique</p>
-                <span class="p-comm" style="background:#7d2ae8;color:white;">80 $/vente</span>
             </a>
             <a class="partner-card" href="https://www.hostinger.com/" target="_blank" rel="noopener" style="border-top-color:#673de6;">
-                <span class="p-icon">🌐</span>
+                <span class="p-icon" style="position:relative;overflow:hidden;height:90px;border-radius:10px;"><img class="theme-photo" src="partner-hostinger.jpg" alt="Hostinger" loading="lazy" data-q="server room|data center servers|web server rack" onerror="ayhPhoto(this)"></span>
                 <h4>Hostinger</h4>
                 <p>Hébergement web</p>
-                <span class="p-comm" style="background:#673de6;color:white;">60%</span>
             </a>
         </div>
 
@@ -1590,59 +1607,67 @@
 
         <!-- Jumia -->
         <a class="affil-banner" href="https://www.jumia.com.gh/?utm_source=ayh&utm_medium=affiliation" target="_blank" rel="noopener" style="border-left-color:#f68b1e;">
-            <div class="affil-logo" style="background:#fff3e0;color:#f68b1e;">🛒</div>
+            <div class="affil-logo" style="background:#fff3e0;color:#f68b1e;;position:relative;overflow:hidden;"><img class="theme-photo" src="partner-jumia.jpg" alt="Jumia" loading="lazy" data-q="online shopping Africa market|shopping bags|e-commerce parcel delivery" onerror="ayhPhoto(this)"></div>
             <div class="affil-info">
                 <h4>Jumia Togo & Ghana — E-commerce N°1 en Afrique</h4>
                 <p>Électronique, mode, beauté, maison, alimentation. Livraison rapide au Togo. Jusqu'à -70% en promotion.</p>
             </div>
-            <span class="affil-btn" style="background:#f68b1e;color:white;">🛒 Acheter</span>
+            <span class="affil-btn" style="background:#f68b1e;color:white;"> Acheter</span>
         </a>
 
         <!-- Booking -->
         <a class="affil-banner" href="https://www.booking.com/" target="_blank" rel="noopener" style="border-left-color:#003580;">
-            <div class="affil-logo" style="background:#e8eef7;color:#003580;">🏨</div>
+            <div class="affil-logo" style="background:#e8eef7;color:#003580;;position:relative;overflow:hidden;"><img class="theme-photo" src="partner-booking.jpg" alt="Booking" loading="lazy" data-q="hotel room|hotel lobby|resort hotel" onerror="ayhPhoto(this)"></div>
             <div class="affil-info">
                 <h4>Booking.com — Hôtels au Togo et dans le monde</h4>
                 <p>Réservez les meilleurs hôtels à Lomé, Kpalimé, Atakpamé. Meilleur prix garanti, annulation gratuite.</p>
             </div>
-            <span class="affil-btn" style="background:#003580;color:white;">🏨 Réserver</span>
+            <span class="affil-btn" style="background:#003580;color:white;"> Réserver</span>
         </a>
 
         <!-- Amazon -->
         <a class="affil-banner" href="https://www.amazon.fr/" target="_blank" rel="noopener" style="border-left-color:#ff9900;">
-            <div class="affil-logo" style="background:#fff8e6;color:#ff9900;">📦</div>
+            <div class="affil-logo" style="background:#fff8e6;color:#ff9900;;position:relative;overflow:hidden;"><img class="theme-photo" src="partner-amazon.jpg" alt="Amazon" loading="lazy" data-q="delivery parcels boxes|cardboard boxes package|warehouse parcels" onerror="ayhPhoto(this)"></div>
             <div class="affil-info">
                 <h4>Amazon — Des millions de produits livrés en Afrique</h4>
                 <p>Électronique, livres, vêtements, outils, cosmétiques. Livraison internationale disponible au Togo.</p>
             </div>
-            <span class="affil-btn" style="background:#ff9900;color:#333;">📦 Commander</span>
+            <span class="affil-btn" style="background:#ff9900;color:#333;"> Commander</span>
         </a>
 
 
 
         <!-- Canva -->
         <a class="affil-banner" href="https://www.canva.com/" target="_blank" rel="noopener" style="border-left-color:#7d2ae8;">
-            <div class="affil-logo" style="background:#f3eaff;color:#7d2ae8;">🎨</div>
+            <div class="affil-logo" style="background:#f3eaff;color:#7d2ae8;;position:relative;overflow:hidden;"><img class="theme-photo" src="partner-canva.jpg" alt="Canva" loading="lazy" data-q="graphic designer desk|design studio computer|creative workspace" onerror="ayhPhoto(this)"></div>
             <div class="affil-info">
                 <h4>Canva Pro — Créez des designs professionnels</h4>
                 <p>Logos, affiches, présentations, réseaux sociaux. Canva Pro à partir de 12$/mois. Essai gratuit 30 jours.</p>
             </div>
-            <span class="affil-btn" style="background:#7d2ae8;color:white;">🎨 Essayer</span>
+            <span class="affil-btn" style="background:#7d2ae8;color:white;"> Essayer</span>
         </a>
 
         <!-- Hostinger -->
         <a class="affil-banner" href="https://www.hostinger.com/" target="_blank" rel="noopener" style="border-left-color:#673de6;">
-            <div class="affil-logo" style="background:#ede8ff;color:#673de6;">🌐</div>
+            <div class="affil-logo" style="background:#ede8ff;color:#673de6;;position:relative;overflow:hidden;"><img class="theme-photo" src="partner-hostinger.jpg" alt="Hostinger" loading="lazy" data-q="server room|data center servers|web server rack" onerror="ayhPhoto(this)"></div>
             <div class="affil-info">
                 <h4>Hostinger — Hébergez votre site web pas cher</h4>
                 <p>Hébergement web à partir de 1,99$/mois. Nom de domaine gratuit, SSL inclus. Idéal pour démarrer en ligne.</p>
             </div>
-            <span class="affil-btn" style="background:#673de6;color:white;">🌐 S'inscrire</span>
+            <span class="affil-btn" style="background:#673de6;color:white;"> S'inscrire</span>
         </a>
 
         <!-- Mention affiliation -->
         <div style="background:#fffbea;border:2px solid var(--jaune);border-radius:12px;padding:20px;margin-top:30px;text-align:center;">
-            <p style="font-size:0.85rem;color:#666;">ℹ️ <strong>Transparence :</strong> certains liens de cette page sont des liens partenaires. Si vous achetez via ces liens, le site peut recevoir une commission, sans frais supplémentaires pour vous.</p>
+            <p style="font-size:0.85rem;color:#666;">ℹ <strong>Transparence :</strong> certains liens de cette page sont des liens partenaires. Si vous achetez via ces liens, le site peut recevoir une commission, sans frais supplémentaires pour vous.</p>
+        </div>
+    </div>
+
+    <div id="photo-credits" style="display:none;max-width:1000px;margin:0 auto;padding:0 20px 40px;">
+        <div style="background:white;border-radius:12px;padding:18px 22px;box-shadow:0 2px 10px var(--ombre);">
+            <h3 style="color:var(--vert);font-size:1rem;margin-bottom:8px;"> Crédits photos</h3>
+            <p style="font-size:0.8rem;color:#666;margin-bottom:8px;">Photos issues de Wikimedia Commons ou de la NASA, sous licence libre. Touchez un titre pour voir la source.</p>
+            <ul id="photo-credits-list" style="font-size:0.8rem;color:#444;line-height:1.7;padding-left:18px;"></ul>
         </div>
     </div>
 </div>
@@ -1679,12 +1704,12 @@
         </div>
         <div class="footer-col">
             <h4>Contact</h4>
-            <p>📍 Kamina, Est Mono — TOGO</p>
-            <p>✉️ zakoszak747@gmail.com</p>
+            <p> Kamina, Est Mono — TOGO</p>
+            <p> zakoszak747@gmail.com</p>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 AYH BELIEVE IN GOD — Conçu avec <span>❤️</span> par <strong style="color:var(--jaune);">Honoré Yaovi</strong> — Kamina, TOGO 🇹🇬</p>
+        <p>© 2026 AYH BELIEVE IN GOD — Conçu avec <span></span> par <strong style="color:var(--jaune);">Honoré Yaovi</strong> — Kamina, TOGO </p>
     </div>
 </footer>
 
@@ -1692,9 +1717,7 @@
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
 
 <!-- ===== CHAT POPUP ===== -->
-<button id="chat-btn" onclick="toggleChat()">
-    💬
-    <span class="chat-notif">1</span>
+<button id="chat-btn" onclick="toggleChat()"><svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg><span class="chat-notif">1</span>
 </button>
 
 <div id="chat-box">
@@ -1703,28 +1726,28 @@
             <div class="chat-avatar">AY</div>
             <div>
                 <h4>AYH Support</h4>
-                <span>🟢 En ligne maintenant</span>
+                <span> En ligne maintenant</span>
             </div>
         </div>
         <button class="chat-close-btn" onclick="toggleChat()">✕</button>
     </div>
     <div class="chat-messages" id="chat-messages">
         <div class="msg bot">
-            👋 Bonjour ! Je suis l'assistant AYH BELIEVE IN GOD. Comment puis-je vous aider aujourd'hui ?
+             Bonjour ! Je suis l'assistant AYH BELIEVE IN GOD. Comment puis-je vous aider aujourd'hui ?
         </div>
         <div class="msg bot">
-            Vous pouvez me poser des questions sur le Togo, l'agriculture, les sciences ou découvrir comment soutenir le site 🙏
+            Vous pouvez me poser des questions sur le Togo, l'agriculture, les sciences ou découvrir comment soutenir le site 
         </div>
     </div>
     <div class="chat-suggestions">
-        <button class="chat-sugg" onclick="sendSugg('En savoir plus sur le Togo')">🇹🇬 Le Togo</button>
-        <button class="chat-sugg" onclick="sendSugg('Comment soutenir le site ?')">🤝 Soutenir</button>
-        <button class="chat-sugg" onclick="sendSugg('Parlez-moi de l\'agriculture togolaise')">🌾 Agriculture</button>
-        <button class="chat-sugg" onclick="sendSugg('Contactez-nous')">📬 Contact</button>
+        <button class="chat-sugg" onclick="sendSugg('En savoir plus sur le Togo')"> Le Togo</button>
+        <button class="chat-sugg" onclick="sendSugg('Comment soutenir le site ?')"> Soutenir</button>
+        <button class="chat-sugg" onclick="sendSugg('Parlez-moi de l\'agriculture togolaise')"> Agriculture</button>
+        <button class="chat-sugg" onclick="sendSugg('Contactez-nous')"> Contact</button>
     </div>
     <div class="chat-input-area">
         <input type="text" id="chat-input" placeholder="Écrivez un message..." onkeypress="if(event.key==='Enter')sendChat()" />
-        <button class="chat-send-btn" onclick="sendChat()">➤</button>
+        <button class="chat-send-btn" onclick="sendChat()" aria-label="Envoyer"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></button>
     </div>
 </div>
 
@@ -1753,12 +1776,12 @@
     // ===== CHAT POPUP =====
     let chatOpen = false;
     const chatResponses = {
-        'togo': '🇹🇬 Le Togo est un pays d\'Afrique de l\'Ouest de 56 600 km² avec environ 8 millions d\'habitants. Situé entre le Ghana et le Bénin, c\'est un pays riche en culture et en histoire.',
-        'don': '🤝 Pour soutenir le site, ouvrez la page "🤝 Soutenir" dans le menu : partager nos articles, nous écrire ou utiliser nos liens partenaires. Merci ! 🙏',
-        'agriculture': '🌾 L\'agriculture togolaise est riche ! Le maïs, le manioc, l\'igname et le karité sont les cultures principales. Visitez notre page Agriculture pour en savoir plus !',
-        'contact': '📬 Vous pouvez nous contacter à : zakoszak747@gmail.com\n📍 Kamina, Est Mono, TOGO',
-        'science': '🔬 Notre page Sciences couvre les sciences générales, les innovations africaines et l\'environnement. Le Togo a beaucoup à apporter au monde scientifique !',
-        'default': '🙏 Merci pour votre message ! Pour plus d\'informations, n\'hésitez pas à visiter nos pages ou à nous écrire à zakoszak747@gmail.com. Dieu vous bénisse ! 🇹🇬'
+        'togo': ' Le Togo est un pays d\'Afrique de l\'Ouest de 56 600 km² avec environ 8 millions d\'habitants. Situé entre le Ghana et le Bénin, c\'est un pays riche en culture et en histoire.',
+        'don': ' Pour soutenir le site, ouvrez la page " Soutenir" dans le menu : partager nos articles, nous écrire ou utiliser nos liens partenaires. Merci ! ',
+        'agriculture': ' L\'agriculture togolaise est riche ! Le maïs, le manioc, l\'igname et le karité sont les cultures principales. Visitez notre page Agriculture pour en savoir plus !',
+        'contact': ' Vous pouvez nous contacter à : zakoszak747@gmail.com\n Kamina, Est Mono, TOGO',
+        'science': ' Notre page Sciences couvre les sciences générales, les innovations africaines et l\'environnement. Le Togo a beaucoup à apporter au monde scientifique !',
+        'default': ' Merci pour votre message ! Pour plus d\'informations, n\'hésitez pas à visiter nos pages ou à nous écrire à zakoszak747@gmail.com. Dieu vous bénisse ! '
     };
 
     function toggleChat() {
@@ -1880,5 +1903,81 @@
     });
 </script>
 
+<script>
+(function () {
+    var OK = /^(CC0|Public domain|PD|CC BY)/i, BAD = /(NC|ND)(?![A-Za-z])/;
+    function strip(h) { try { return new DOMParser().parseFromString(h || '', 'text/html').body.textContent.trim(); } catch (e) { return ''; } }
+    function cget(k) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+    function cset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    function commons(q) {
+        var key = 'ayhph1:' + q, c = cget(key);
+        if (c) return Promise.resolve(c.none ? null : c);
+        var url = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=20'
+            + '&gsrsearch=' + encodeURIComponent(q + ' filetype:bitmap')
+            + '&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=640'
+            + '&iiextmetadatafilter=LicenseShortName|Artist|NonFree|Restrictions';
+        return fetch(url).then(function (r) { return r.json(); }).then(function (j) {
+            var pages = Object.values((j.query && j.query.pages) || {}).sort(function (a, b) { return a.index - b.index; });
+            for (var i = 0; i < pages.length; i++) {
+                var ii = pages[i].imageinfo && pages[i].imageinfo[0];
+                if (!ii || ii.mime !== 'image/jpeg' || ii.width < 900 || ii.width / ii.height < 1.15) continue;
+                var md = ii.extmetadata || {};
+                var lic = (md.LicenseShortName && md.LicenseShortName.value) || '';
+                if (!OK.test(lic) || BAD.test(lic)) continue;
+                if ((md.NonFree && md.NonFree.value) || (md.Restrictions && md.Restrictions.value)) continue;
+                var p = { url: ii.thumburl || ii.url, page: ii.descriptionurl, license: lic,
+                          artist: strip(md.Artist && md.Artist.value).slice(0, 60) || 'Auteur sur Wikimedia Commons', source: 'Wikimedia Commons' };
+                cset(key, p); return p;
+            }
+            cset(key, { none: true }); return null;
+        });
+    }
+    function nasa(q) {
+        var key = 'ayhph1:nasa:' + q, c = cget(key);
+        if (c) return Promise.resolve(c.none ? null : c);
+        return fetch('https://images-api.nasa.gov/search?media_type=image&q=' + encodeURIComponent(q))
+            .then(function (r) { return r.json(); }).then(function (j) {
+                var items = (j.collection && j.collection.items) || [];
+                for (var i = 0; i < items.length; i++) {
+                    var l = items[i].links && items[i].links[0], d = items[i].data && items[i].data[0];
+                    if (!l || !d || !l.href) continue;
+                    var p = { url: l.href.replace('~thumb', '~medium'), page: 'https://images.nasa.gov/details/' + encodeURIComponent(d.nasa_id),
+                              license: 'NASA — domaine public', artist: 'NASA', source: 'NASA' };
+                    cset(key, p); return p;
+                }
+                cset(key, { none: true }); return null;
+            });
+    }
+    function credit(title, p) {
+        var ul = document.getElementById('photo-credits-list'), box = document.getElementById('photo-credits');
+        if (!ul || !box) return;
+        window.__ayhSeen = window.__ayhSeen || {};
+        if (window.__ayhSeen[p.page]) return; window.__ayhSeen[p.page] = 1;
+        var li = document.createElement('li'), a = document.createElement('a');
+        a.href = p.page; a.target = '_blank'; a.rel = 'noopener'; a.textContent = title;
+        a.style.cssText = 'color:var(--vert);font-weight:700;';
+        li.appendChild(a); li.appendChild(document.createTextNode(' — ' + p.artist + ' · ' + p.license + ' · ' + p.source));
+        ul.appendChild(li); box.style.display = 'block';
+    }
+    function commonsAny(list) {
+        var i = 0;
+        function next() {
+            if (i >= list.length) return Promise.resolve(null);
+            return commons(list[i++]).then(function (p) { return p || next(); }).catch(function () { return next(); });
+        }
+        return next();
+    }
+    window.ayhPhoto = function (img) {
+        img.onerror = null;
+        var q = img.getAttribute('data-q'), n = img.getAttribute('data-nasa'), title = img.getAttribute('alt') || '';
+        var first = n ? nasa(n).catch(function () { return null; }) : Promise.resolve(null);
+        first.then(function (p) { return p || commonsAny((q || '').split('|')); }).then(function (p) {
+            if (!p) { img.remove(); return; }
+            img.onerror = function () { img.remove(); };
+            img.src = p.url; credit(title, p);
+        }).catch(function () { img.remove(); });
+    };
+})();
+</script>
 </body>
 </html>
