@@ -1499,6 +1499,7 @@
             <div class="nav-dropdown-menu">
                 <a href="partenaires.html">🤝 Partenaires</a>
                 <a href="apropos.html">👤 À Propos</a>
+                <a href="formation.html">🎓 Formation</a>
                 <a href="confidentialite.html">🔒 Confidentialité</a>
             </div>
         </li>
@@ -1521,6 +1522,7 @@
         <li><a href="partenaires.html" onclick="closeMenu()">🤝 Partenaires</a></li>
         <li><a href="contact.html" onclick="closeMenu()">📬 Contact</a></li>
         <li><a href="apropos.html" onclick="closeMenu()">👤 À Propos</a></li>
+        <li><a href="formation.html" onclick="closeMenu()">🎓 Formation</a></li>
         <li><a href="confidentialite.html" onclick="closeMenu()">🔒 Confidentialité</a></li>
     </ul>
     <a href="soutenir.html" class="don-btn-mobile" onclick="closeMenu()">🤝 Soutenir le site</a>
@@ -1720,6 +1722,7 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="apropos.html">À Propos</a>
+            <a href="formation.html">Formation</a>
             <a href="confidentialite.html">Confidentialité</a>
         </div>
         <div class="footer-col">
@@ -1854,7 +1857,7 @@
     }
 
     // Navigation entre pages
-    const PAGE_FILES = {"accueil": "index.html", "blog": "blog.html", "blog-tech": "blog-tech.html", "sciences": "sciences.html", "agriculture": "agriculture.html", "contact": "contact.html", "apropos": "apropos.html", "affiliation": "partenaires.html", "don": "soutenir.html", "confidentialite": "confidentialite.html"};
+    const PAGE_FILES = {"accueil": "index.html", "blog": "blog.html", "blog-tech": "blog-tech.html", "sciences": "sciences.html", "agriculture": "agriculture.html", "contact": "contact.html", "formation": "formation.html", "apropos": "apropos.html", "affiliation": "partenaires.html", "don": "soutenir.html", "confidentialite": "confidentialite.html"};
     function showPage(id) { if (PAGE_FILES[id]) window.location.href = PAGE_FILES[id]; }
 
     // Marquer le lien actif du menu selon la page courante
