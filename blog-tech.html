@@ -1476,6 +1476,7 @@
             100% { transform: translateX(-100%); }
         }
     </style>
+<style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
 </head>
 <body>
 
@@ -1537,7 +1538,7 @@
 <!-- ===== PAGE ACCUEIL ===== -->
 <div id="blog-tech" class="page active">
     <div class="blog-hero" style="background:linear-gradient(135deg,#0d47a1,#1a237e,#000);">
-        <h1>🤖 Blog Tech & IA</h1>
+        <h1>Blog Tech & IA</h1>
         <p>Intelligence Artificielle · Innovation numérique · Technologies africaines</p>
     </div>
     <div class="togo-strip"><span class="s1"></span><span class="s2"></span><span class="s3"></span><span class="s4"></span><span class="s5"></span></div>
@@ -1545,7 +1546,7 @@
     <div class="blog-grid">
 
         <div class="blog-card animate-up delay-1">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#0d47a1,#1565c0);">🧠</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#0d47a1,#1565c0);"><img class="theme-photo" src="tech-ia.jpg" alt="L'IA au service de l'Afrique" loading="lazy" data-q="artificial intelligence technology|computer circuit board|robot technology" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#0d47a1;">INTELLIGENCE ARTIFICIELLE</span>
                 <h3>L'IA au service de l'Afrique</h3>
@@ -1558,7 +1559,7 @@
         </div>
 
         <div class="blog-card animate-up delay-2">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#4527a0,#311b92);">📱</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#4527a0,#311b92);"><img class="theme-photo" src="tech-mobile.jpg" alt="La révolution mobile en Afrique de l'Ouest" loading="lazy" data-q="mobile money Africa|mobile phone Africa payment|smartphone Africa" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#4527a0;">MOBILE & FINTECH</span>
                 <h3>La révolution mobile en Afrique de l'Ouest</h3>
@@ -1571,7 +1572,7 @@
         </div>
 
         <div class="blog-card animate-up delay-3">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#00695c,#004d40);">🌐</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#00695c,#004d40);"><img class="theme-photo" src="tech-web.jpg" alt="Construire sa présence numérique au Togo" loading="lazy" data-q="web developer laptop code|laptop programming|computer coding screen" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#00695c;">WEB & NUMÉRIQUE</span>
                 <h3>Construire sa présence numérique au Togo</h3>
@@ -1584,7 +1585,7 @@
         </div>
 
         <div class="blog-card animate-up delay-1">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#e65100,#bf360c);">⛓️</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#e65100,#bf360c);"><img class="theme-photo" src="tech-blockchain.jpg" alt="Blockchain et cryptomonnaies en Afrique" loading="lazy" data-q="blockchain|bitcoin coin|cryptocurrency" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#e65100;">BLOCKCHAIN & CRYPTO</span>
                 <h3>Blockchain et cryptomonnaies en Afrique</h3>
@@ -1597,7 +1598,7 @@
         </div>
 
         <div class="blog-card animate-up delay-2">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#1b5e20,#2e7d32);">🌱</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#1b5e20,#2e7d32);"><img class="theme-photo" src="tech-agrotech.jpg" alt="La technologie au service de l'agriculture togolaise" loading="lazy" data-q="agricultural drone field|precision agriculture technology|smart farming sensor" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#1b5e20;">AGROTECH</span>
                 <h3>La technologie au service de l'agriculture togolaise</h3>
@@ -1610,7 +1611,7 @@
         </div>
 
         <div class="blog-card animate-up delay-3">
-            <div class="blog-card-img" style="background:linear-gradient(135deg,#c62828,#b71c1c);">🎓</div>
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#c62828,#b71c1c);"><img class="theme-photo" src="tech-education.jpg" alt="Apprendre le code et l'IA gratuitement" loading="lazy" data-q="student learning coding laptop|programming class computers|online learning laptop" onerror="ayhPhoto(this)"></div>
             <div class="blog-card-body">
                 <span class="card-tag" style="background:#c62828;">ÉDUCATION TECH</span>
                 <h3>Apprendre le code et l'IA gratuitement</h3>
@@ -1620,6 +1621,14 @@
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
                 <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech6')">Lire la suite →</button>
             </div>
+        </div>
+    </div>
+
+    <div id="photo-credits" style="display:none;max-width:1000px;margin:0 auto;padding:0 20px 40px;">
+        <div style="background:white;border-radius:12px;padding:18px 22px;box-shadow:0 2px 10px var(--ombre);">
+            <h3 style="color:var(--vert);font-size:1rem;margin-bottom:8px;"> Crédits photos</h3>
+            <p style="font-size:0.8rem;color:#666;margin-bottom:8px;">Photos issues de Wikimedia Commons ou de la NASA, sous licence libre. Touchez un titre pour voir la source.</p>
+            <ul id="photo-credits-list" style="font-size:0.8rem;color:#444;line-height:1.7;padding-left:18px;"></ul>
         </div>
     </div>
 </div>
@@ -2082,5 +2091,79 @@
     });
 </script>
 
+<script>
+(function () {
+    var OK = /^(CC0|Public domain|PD|CC BY)/i, BAD = /(NC|ND)(?![A-Za-z])/;
+    function strip(h) { try { return new DOMParser().parseFromString(h || '', 'text/html').body.textContent.trim(); } catch (e) { return ''; } }
+    function cget(k) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+    function cset(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+    function commons(q) {
+        var key = 'ayhph1:' + q, c = cget(key);
+        if (c) return Promise.resolve(c.none ? null : c);
+        var url = 'https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=20'
+            + '&gsrsearch=' + encodeURIComponent(q + ' filetype:bitmap')
+            + '&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=640'
+            + '&iiextmetadatafilter=LicenseShortName|Artist|NonFree|Restrictions';
+        return fetch(url).then(function (r) { return r.json(); }).then(function (j) {
+            var pages = Object.values((j.query && j.query.pages) || {}).sort(function (a, b) { return a.index - b.index; });
+            for (var i = 0; i < pages.length; i++) {
+                var ii = pages[i].imageinfo && pages[i].imageinfo[0];
+                if (!ii || ii.mime !== 'image/jpeg' || ii.width < 900 || ii.width / ii.height < 1.15) continue;
+                var md = ii.extmetadata || {};
+                var lic = (md.LicenseShortName && md.LicenseShortName.value) || '';
+                if (!OK.test(lic) || BAD.test(lic)) continue;
+                if ((md.NonFree && md.NonFree.value) || (md.Restrictions && md.Restrictions.value)) continue;
+                var p = { url: ii.thumburl || ii.url, page: ii.descriptionurl, license: lic,
+                          artist: strip(md.Artist && md.Artist.value).slice(0, 60) || 'Auteur sur Wikimedia Commons', source: 'Wikimedia Commons' };
+                cset(key, p); return p;
+            }
+            cset(key, { none: true }); return null;
+        });
+    }
+    function nasa(q) {
+        var key = 'ayhph1:nasa:' + q, c = cget(key);
+        if (c) return Promise.resolve(c.none ? null : c);
+        return fetch('https://images-api.nasa.gov/search?media_type=image&q=' + encodeURIComponent(q))
+            .then(function (r) { return r.json(); }).then(function (j) {
+                var items = (j.collection && j.collection.items) || [];
+                for (var i = 0; i < items.length; i++) {
+                    var l = items[i].links && items[i].links[0], d = items[i].data && items[i].data[0];
+                    if (!l || !d || !l.href) continue;
+                    var p = { url: l.href.replace('~thumb', '~medium'), page: 'https://images.nasa.gov/details/' + encodeURIComponent(d.nasa_id),
+                              license: 'NASA — domaine public', artist: 'NASA', source: 'NASA' };
+                    cset(key, p); return p;
+                }
+                cset(key, { none: true }); return null;
+            });
+    }
+    function credit(title, p) {
+        var ul = document.getElementById('photo-credits-list'), box = document.getElementById('photo-credits');
+        if (!ul || !box) return;
+        var li = document.createElement('li'), a = document.createElement('a');
+        a.href = p.page; a.target = '_blank'; a.rel = 'noopener'; a.textContent = title;
+        a.style.cssText = 'color:var(--vert);font-weight:700;';
+        li.appendChild(a); li.appendChild(document.createTextNode(' — ' + p.artist + ' · ' + p.license + ' · ' + p.source));
+        ul.appendChild(li); box.style.display = 'block';
+    }
+    function commonsAny(list) {
+        var i = 0;
+        function next() {
+            if (i >= list.length) return Promise.resolve(null);
+            return commons(list[i++]).then(function (p) { return p || next(); }).catch(function () { return next(); });
+        }
+        return next();
+    }
+    window.ayhPhoto = function (img) {
+        img.onerror = null;
+        var q = img.getAttribute('data-q'), n = img.getAttribute('data-nasa'), title = img.getAttribute('alt') || '';
+        var first = n ? nasa(n).catch(function () { return null; }) : Promise.resolve(null);
+        first.then(function (p) { return p || commonsAny((q || '').split('|')); }).then(function (p) {
+            if (!p) { img.remove(); return; }
+            img.onerror = function () { img.remove(); };
+            img.src = p.url; credit(title, p);
+        }).catch(function () { img.remove(); });
+    };
+})();
+</script>
 </body>
 </html>
