@@ -1501,6 +1501,14 @@
 }
 </style>
 <style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
+<link rel="canonical" href="https://zakoszak747-source.github.io/blog.html">
+<meta property="og:site_name" content="AYH BELIEVE IN GOD">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Réflexions et analyses sur le Togo | AYH BELIEVE IN GOD">
+<meta property="og:description" content="Articles d'opinion, société, culture et emploi au Togo, écrits par Honoré Yaovi à Kamina.">
+<meta property="og:url" content="https://zakoszak747-source.github.io/blog.html">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 
@@ -1579,7 +1587,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('article1')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-togo-un-pays-atypique.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1593,7 +1601,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-rouge" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('article2')">Lire la suite →</button>
+                <a class="btn btn-rouge" style="padding:6px 18px;font-size:0.8rem;"  href="article-situation-des-fonctionnaires-togo.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1607,7 +1615,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-jaune" style="padding:6px 18px;font-size:0.8rem;color:var(--noir);" onclick="openModal('article3')">Lire la suite →</button>
+                <a class="btn btn-jaune" style="padding:6px 18px;font-size:0.8rem;color:var(--noir);"  href="article-voies-pacifiques-changement-togo.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1621,7 +1629,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('article4')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-mon-village-kamina.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1635,23 +1643,12 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-rouge" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('article5')">Lire la suite →</button>
+                <a class="btn btn-rouge" style="padding:6px 18px;font-size:0.8rem;"  href="article-insertion-professionnelle-togo.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
         <!-- Article 6 -->
-        <div class="blog-card animate-up delay-3">
-            <div class="blog-card-img jaune"><img class="theme-photo" src="blog-machiavel.jpg" alt="Machiavel et le pouvoir — Réflexion" loading="lazy" data-q="Niccolò Machiavelli portrait|Machiavelli statue Uffizi|Palazzo Vecchio Florence" onerror="ayhPhoto(this)"></div>
-            <div class="blog-card-body">
-                <span class="card-tag">PHILOSOPHIE</span>
-                <h3>Machiavel et le pouvoir — Réflexion</h3>
-                <p>Pour les États héréditaires façonnés à l'obéissance envers la famille du prince, il y a bien moins de difficultés à les maintenir...</p>
-            </div>
-            <div class="blog-card-footer">
-                <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-jaune" style="padding:6px 18px;font-size:0.8rem;color:var(--noir);" onclick="openModal('article6')">Lire la suite →</button>
-            </div>
-        </div>
+        
 
     </div>
 
@@ -1664,264 +1661,6 @@
     </div>
 </div>
 
-<!-- ===== MODALES ARTICLES ===== -->
-
-<!-- Modale CSS -->
-<style>
-    .modal-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.75);
-        z-index: 2000;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        animation: fadeInUp 0.3s ease;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-box {
-        background: var(--blanc);
-        border-radius: 16px;
-        max-width: 750px;
-        width: 100%;
-        max-height: 88vh;
-        overflow-y: auto;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        animation: fadeInUp 0.4s ease both;
-    }
-    .modal-strip {
-        height: 6px;
-        border-radius: 16px 16px 0 0;
-        background: linear-gradient(to right, var(--vert), var(--jaune), var(--rouge));
-    }
-    .modal-header {
-        position: sticky;
-        top: 0;
-        background: var(--blanc);
-        padding: 20px 25px 15px;
-        border-bottom: 1px solid #eee;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        z-index: 10;
-    }
-    .modal-header h2 { font-size: 1.2rem; font-weight: 700; color: var(--noir); max-width: 85%; }
-    .modal-close {
-        background: #f0f0f0;
-        border: none;
-        border-radius: 50%;
-        width: 36px; height: 36px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        transition: background 0.3s;
-        flex-shrink: 0;
-    }
-    .modal-close:hover { background: var(--rouge); color: white; }
-    .modal-tag {
-        display: inline-block;
-        background: var(--vert);
-        color: white;
-        font-size: 0.7rem;
-        font-weight: 700;
-        padding: 3px 10px;
-        border-radius: 10px;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
-    }
-    .modal-content { padding: 25px; }
-    .modal-content p {
-        font-size: 0.95rem;
-        color: #444;
-        line-height: 1.9;
-        margin-bottom: 16px;
-    }
-    .modal-content h3 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--vert);
-        margin: 20px 0 8px;
-    }
-    .modal-author {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 25px;
-        border-top: 1px solid #eee;
-        font-size: 0.85rem;
-        color: #888;
-    }
-</style>
-<style>
-    @media (max-width: 600px) {
-        .modal-overlay { padding: 10px; }
-        .modal-box { max-height: 92vh; }
-        .modal-header { padding: 14px 16px 10px; }
-        .modal-header h2 { font-size: 1.02rem; line-height: 1.35; }
-        .modal-content { padding: 16px 18px; }
-        .modal-content p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px; text-align: left; }
-        .modal-content h3 { font-size: 1rem; margin: 16px 0 6px; }
-        .modal-author { padding: 12px 18px; }
-    }
-</style>
-
-<!-- Article 1 -->
-<div id="modal-article1" class="modal-overlay" onclick="closeModalOutside(event, 'article1')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag">POLITIQUE</span>
-                <h2>Togo, un pays atypique dans le monde</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article1')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p><em>Cet article exprime l'opinion de son auteur.</em></p>
-            <p>Le Togo est un pays d'Afrique de l'Ouest d'environ 56 600 km². Depuis janvier 1967, le pouvoir y est exercé par une même famille : le général Gnassingbé Eyadéma jusqu'à sa mort en 2005, puis son fils Faure Gnassingbé. Cette longévité politique fait du Togo un cas particulier en Afrique et dans le monde : c'est ce qui le rend atypique.</p>
-            <p>Pour beaucoup de Togolais, dont moi, cette situation soulève de vraies questions. Le pays a des atouts : sa position géographique, son agriculture, sa culture et surtout sa jeunesse. Pourtant, une grande partie de la population vit encore dans des conditions difficiles. Je me demande ce que nous aurions pu construire de plus si les richesses du pays avaient profité à tous.</p>
-            <h3>La jeunesse, première concernée</h3>
-            <p>Les jeunes forment une grande partie de la population, mais beaucoup peinent à trouver un emploi, une formation adaptée ou des perspectives. J'ai le sentiment que leur quotidien est trop peu entendu. Écouter cette génération et investir dans son avenir devrait être une priorité pour tous.</p>
-            <h3>Ce qui est en débat aujourd'hui</h3>
-            <p>La Constitution de 2024 a instauré un régime parlementaire avec un président du Conseil des ministres. Ses opposants y voient un moyen de prolonger durablement le pouvoir en place ; le camp présidentiel affirme qu'elle garantit une meilleure représentation. Je partage la préoccupation de ceux qui réclament plus d'équilibre entre les pouvoirs, plus de transparence dans la gestion des fonds publics et un vrai espace pour la critique.</p>
-            <h3>Ce que je souhaite</h3>
-            <p>Je souhaite un Togo où chacun peut s'exprimer librement et pacifiquement, où les institutions sont solides et contrôlées, et où les richesses du pays se traduisent en écoles, en hôpitaux et en emplois. Ce chemin passe par le dialogue, le respect du droit et la participation de tous.</p>
-            <p style="font-size:0.85rem;color:#666;">Pour aller plus loin : <a href="https://britannica.com/biography/Gnassingbe-Eyadema" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Britannica (Gnassingbé Eyadéma)</a> · <a href="https://fr.africanews.com/2026/07/27/togo-mobilisation-de-lopposition-contre-la-constitution-adoptee-en-2024/" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Africanews (27 juillet 2026)</a>.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- Article 2 -->
-<div id="modal-article2" class="modal-overlay" onclick="closeModalOutside(event, 'article2')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag" style="background:var(--rouge);">SOCIÉTÉ</span>
-                <h2>La situation critique des fonctionnaires du Togo</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article2')">✕</button>
-        </div>
-        <div class="modal-content">
-            <h3>Le mythe du fonctionnaire au Togo</h3>
-            <p>Le Togo, un petit pays de l'Afrique de l'Ouest situé entre le Bénin à l'Est et le Ghana à l'Ouest, avec une ouverture sur l'océan Atlantique, possède un fond de réalité qui ronge ses habitants. Le pays possède des atouts de diverses natures pour sortir de la pauvreté, mais il est sous le règne d'une dynastie farouche qui a tout soumis à son autorité.</p>
-            <p>Le jeune togolais qui souhaite vivre dans un État lui garantissant un avenir radieux se voit, dès l'enfance, confronté à la pauvreté des parents, ce qui l'oblige tant bien que mal à subir ce poids jusqu'à l'âge où il doit s'en affranchir.</p>
-            <p>Finir ses études universitaires, diplôme en main au Togo, c'est le début de la vraie galère. La dynastie au pouvoir limite l'offre d'emploi dans la fonction publique. Avoir un emploi est conditionné à l'appartenance politique à la dynastie.</p>
-            <h3>Le fonctionnaire : messie de la famille</h3>
-            <p>Un fonctionnaire dans la famille, c'est un messie — on le prend pour le sauveur de tous les problèmes. Il est inféodé par les méandres familiales : frères, sœurs, cousins, cousines et autres. Les parents, les amis, les associations, l'église — toutes ces entités attendent de lui des retombées financières chaque mois.</p>
-            <p>À la fin du mois, le salaire perçu est dépensé de toutes parts et lui-même vit en attendant le mois suivant. Que c'est difficile d'être fonctionnaire togolais !</p>
-            <h3>L'enseignant — le plus lésé</h3>
-            <p>L'enseignant est particulièrement à plaindre : aucune dignité accordée par les autorités. Dès le début du mois, l'enseignant pense déjà au suivant car son fonds est déjà épuisé sous le coup des dettes. Au Togo, un fonctionnaire est comme un arbre fruitier dont tout le monde s'adosse pour se satisfaire — en quelque sorte la vache à lait de toute la famille.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- Article 3 -->
-<div id="modal-article3" class="modal-overlay" onclick="closeModalOutside(event, 'article3')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag" style="background:#e6b800;color:var(--noir);">OPINION</span>
-                <h2>Quelles voies pacifiques pour le changement au Togo ?</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article3')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p><em>Cet article exprime l'opinion de son auteur.</em></p>
-            <p>Depuis l'adoption de la Constitution de 2024, qui a instauré un régime parlementaire et la fonction de président du Conseil des ministres, l'avenir politique du Togo fait débat. L'opposition et une partie de la société civile dénoncent une concentration du pouvoir ; le camp présidentiel soutient au contraire que le texte garantit une meilleure représentation. Quelle que soit notre position, une question demeure : comment faire évoluer notre pays dans la paix et dans le respect du droit ? Voici trois voies que je défends en tant que citoyen.</p>
-            <h3>1. La mobilisation citoyenne pacifique</h3>
-            <p>Pétitions, rassemblements autorisés, prises de parole publiques, vote : l'expression pacifique est un droit. Mais la peur freine souvent la participation. Selon des organisations de la société civile, les manifestations de 2025 contre la réforme ont fait sept morts. Protéger les citoyens qui s'expriment pacifiquement est donc une condition du débat démocratique.</p>
-            <h3>2. Un dialogue national sincère</h3>
-            <p>Réunir autour d'une même table le pouvoir, l'opposition, la société civile, les autorités religieuses et traditionnelles et les jeunes est la voie la plus durable. Le président du Conseil lui-même a appelé, au début de 2026, à une « culture politique nouvelle » fondée sur le dialogue. Reste à transformer cet appel en un cadre concret, avec des garanties pour toutes les parties. La méfiance et les divisions rendent cette voie difficile, mais pas impossible.</p>
-            <h3>3. Les recours juridiques et la pression diplomatique</h3>
-            <p>Des partis d'opposition et des organisations de la société civile ont saisi la Cour de justice de la CEDEAO. Selon Africanews, celle-ci a estimé, dans un arrêt du 29 janvier, que la réforme constituait « un changement inconstitutionnel de gouvernement ». Utiliser les institutions régionales et internationales, par des moyens légaux et pacifiques, fait partie de la stratégie.</p>
-            <h3>L'engagement citoyen au quotidien</h3>
-            <p>Le changement durable commence par nous : s'informer auprès de sources fiables, s'éduquer à la citoyenneté, soutenir des médias et des associations indépendants, et unir la diaspora et les Togolais de l'intérieur autour d'objectifs clairs, légaux et non violents. Le recours à la force n'apporterait que de nouvelles souffrances à un peuple qui en a déjà beaucoup connu : la paix et le droit restent notre meilleure arme.</p>
-            <p style="font-size:0.85rem;color:#666;">Pour aller plus loin : <a href="https://fr.africanews.com/2026/07/27/togo-mobilisation-de-lopposition-contre-la-constitution-adoptee-en-2024/" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">Africanews (27 juillet 2026)</a> · <a href="https://issafrica.org/fr/iss-today/l-absence-de-consensus-sur-les-reformes-constitutionnelles-accentue-les-tensions-au-togo" target="_blank" rel="noopener" style="color:var(--vert);font-weight:700;">ISS Africa</a>.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- Article 4 -->
-<div id="modal-article4" class="modal-overlay" onclick="closeModalOutside(event, 'article4')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag">CULTURE</span>
-                <h2>Mon village Kamina — Terre de courage</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article4')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>Mon village Kamina regorge des hommes et des femmes forts ayant de grands cœurs dans le travail et du courage dans leur vie quotidienne. Malgré les difficultés que rencontre cette brave population sur le plan politique, elle se tient toujours debout et prête à aller toujours de l'avant sans perdre l'espoir.</p>
-            <p>On est fier d'appartenir à ce beau village qui nous donne tant de nostalgie ; la terre nourricière, on te rend notre hommage et nous sommes prêts à rehausser ton nom dans ce monde car Dieu a béni tes enfants comme le peuple d'Israël.</p>
-            <p>L'intelligence, la sagesse et la connaissance de Dieu nous ont été données et on lui rend vraiment un grand remerciement pour chaque âme qu'il a placée dans ce village.</p>
-            <h3>Un peuple debout malgré tout</h3>
-            <p>Le Togo, un petit pays de l'Afrique de l'Ouest, pourrait prétendre être prospère, mais les dirigeants l'ont pris en otage. Les habitants de Kamina, eux, n'ont jamais baissé les bras. Ils cultivent la terre, élèvent leurs enfants dans la foi et la dignité, et gardent l'espoir d'un lendemain meilleur.</p>
-            <p>Kamina, c'est plus qu'un village — c'est une âme, une identité, un héritage que nous portons fièrement partout où nous allons dans le monde.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- Article 5 -->
-<div id="modal-article5" class="modal-overlay" onclick="closeModalOutside(event, 'article5')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag" style="background:var(--rouge);">EMPLOI</span>
-                <h2>L'insertion professionnelle au Togo</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article5')">✕</button>
-        </div>
-        <div class="modal-content">
-            <h3>Définition</h3>
-            <p>L'insertion professionnelle est définie comme le processus d'accès à l'emploi. Ce qui renvoie donc à la capacité d'effectuer avec succès la transition entre l'école et le marché du travail. C'est une responsabilité individuelle où chacun entreprend les démarches nécessaires pour atteindre un objectif déterminé d'entrée sur le marché du travail.</p>
-            <h3>Les éléments d'une insertion professionnelle réussie</h3>
-            <p><strong>1. Tenter plusieurs concours</strong> qui s'offrent à nous. Ne pas se limiter à un seul secteur ou une seule opportunité. La diversification des candidatures augmente considérablement les chances de succès.</p>
-            <p><strong>2. Ne pas envoyer son CV partout.</strong> En fait, les conseils en recherche d'emploi nous disent souvent que plus nous envoyons nos CV, plus nous aurons de chances. Malheureusement, ce n'est pas suffisant. Il ne s'agit pas d'envoyer nos CV comme une bouteille à la mer, mais de choisir minutieusement à qui nous allons les soumettre.</p>
-            <h3>La réalité togolaise</h3>
-            <p>Au Togo, l'insertion professionnelle est doublement difficile : d'une part à cause du manque d'opportunités créées par un État défaillant, d'autre part à cause du clientélisme politique qui conditionne l'accès aux emplois publics à l'appartenance au parti au pouvoir.</p>
-            <p>Malgré cela, de nombreux jeunes togolais font preuve d'une résilience remarquable, créant leurs propres entreprises et s'inscrivant dans l'économie informelle pour subvenir à leurs besoins et ceux de leur famille.</p>
-			<img src="jeune.png" alt="jeune" style="width:100%;height:auto;display:block;"/>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- Article 6 -->
-<div id="modal-article6" class="modal-overlay" onclick="closeModalOutside(event, 'article6')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div>
-                <span class="modal-tag" style="background:#e6b800;color:var(--noir);">PHILOSOPHIE</span>
-                <h2>Machiavel et le pouvoir — Réflexion</h2>
-            </div>
-            <button class="modal-close" onclick="closeModal('article6')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>Je ne traiterai point ici des républiques, car j'en ai parlé amplement ailleurs : je ne m'occuperai que des principautés ; et, reprenant le fil des distinctions que je viens d'établir, j'examinerai comment, dans ces diverses hypothèses, les princes peuvent se conduire et se maintenir.</p>
-            <h3>Les États héréditaires</h3>
-            <p>Je dis donc que, pour les États héréditaires et façonnés à l'obéissance envers la famille du prince, il y a bien moins de difficultés à les maintenir que les États nouveaux : il suffit au prince de ne point outrepasser les bornes posées par ses ancêtres, et de temporiser avec les événements.</p>
-            <p>Aussi, ne fût-il doué que d'une capacité ordinaire, il saura se maintenir sur le trône, à moins qu'une force irrésistible et hors de toute prévoyance ne l'en renverse ; mais alors même qu'il l'aura perdu, le moindre revers éprouvé par l'usurpateur le lui fera aisément recouvrer.</p>
-            <h3>L'amour naturel du peuple</h3>
-            <p>En effet, un prince héréditaire a bien moins de motifs et se trouve bien moins dans la nécessité de déplaire à ses sujets : il en est par cela même bien plus aimé ; et, à moins que des vices extraordinaires ne le fassent haïr, ils doivent naturellement lui être affectionnés.</p>
-            <p>D'ailleurs dans l'ancienneté et dans la longue continuation d'une puissance, la mémoire des précédentes innovations s'efface ; les causes qui les avaient produites s'évanouissent : il n'y a donc plus de ces sortes de pierres d'attente qu'une révolution laisse toujours pour en appuyer une seconde.</p>
-            <p style="font-style:italic;color:#888;margin-top:20px;">— Nicolas Machiavel, Le Prince (1515)</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- ===== PAGE CONTACT ===== -->
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -2079,7 +1818,7 @@
 
     // Marquer le lien actif du menu selon la page courante
     (function () {
-        const cur = window.location.pathname.split('/').pop() || 'index.html';
+        const cur = document.body.getAttribute('data-parent') || window.location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('nav a, .nav-mobile a').forEach(a => {
             a.classList.remove('active');
             if (a.getAttribute('href') === cur) a.classList.add('active');

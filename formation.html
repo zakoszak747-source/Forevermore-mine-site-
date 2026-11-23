@@ -1500,6 +1500,14 @@
  .theme-card-body h3,.theme-card-body p{overflow-wrap:anywhere}
 }
 </style>
+<link rel="canonical" href="https://zakoszak747-source.github.io/formation.html">
+<meta property="og:site_name" content="AYH BELIEVE IN GOD">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Universités scientifiques d'Afrique de l'Ouest — contacts | AYH BELIEVE IN GOD">
+<meta property="og:description" content="Liste d'universités et instituts scientifiques d'Afrique de l'Ouest avec site officiel, téléphone et e-mail pour s'informer sur les formations.">
+<meta property="og:url" content="https://zakoszak747-source.github.io/formation.html">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 
@@ -1740,7 +1748,7 @@
 
     // Marquer le lien actif du menu selon la page courante
     (function () {
-        const cur = window.location.pathname.split('/').pop() || 'index.html';
+        const cur = document.body.getAttribute('data-parent') || window.location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('nav a, .nav-mobile a').forEach(a => {
             a.classList.remove('active');
             if (a.getAttribute('href') === cur) a.classList.add('active');

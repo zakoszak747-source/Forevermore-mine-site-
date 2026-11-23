@@ -1501,6 +1501,14 @@
 }
 </style>
 <style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
+<link rel="canonical" href="https://zakoszak747-source.github.io/agriculture.html">
+<meta property="og:site_name" content="AYH BELIEVE IN GOD">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agriculture togolaise | AYH BELIEVE IN GOD">
+<meta property="og:description" content="Cultures, pratiques traditionnelles et conseils sur l'agriculture au Togo.">
+<meta property="og:url" content="https://zakoszak747-source.github.io/agriculture.html">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 
@@ -1889,7 +1897,7 @@
 
     // Marquer le lien actif du menu selon la page courante
     (function () {
-        const cur = window.location.pathname.split('/').pop() || 'index.html';
+        const cur = document.body.getAttribute('data-parent') || window.location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('nav a, .nav-mobile a').forEach(a => {
             a.classList.remove('active');
             if (a.getAttribute('href') === cur) a.classList.add('active');

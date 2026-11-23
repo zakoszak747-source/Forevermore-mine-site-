@@ -1501,6 +1501,14 @@
 }
 </style>
 <style>.theme-card-top{position:relative;overflow:hidden;height:150px}.theme-photo{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}.blog-card-img{position:relative;overflow:hidden}.theme-photo.half-l{width:50%}.theme-photo.half-r{left:50%;width:50%}</style>
+<link rel="canonical" href="https://zakoszak747-source.github.io/blog-tech.html">
+<meta property="og:site_name" content="AYH BELIEVE IN GOD">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tech &amp; IA en Afrique | AYH BELIEVE IN GOD">
+<meta property="og:description" content="Intelligence artificielle, mobile money, web et agriculture connectée : la technologie au service du Togo et de l'Afrique.">
+<meta property="og:url" content="https://zakoszak747-source.github.io/blog-tech.html">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 
@@ -1578,7 +1586,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech1')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-ia-au-service-de-l-afrique.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1591,7 +1599,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech2')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-revolution-mobile-afrique-ouest.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1604,7 +1612,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech3')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-presence-numerique-togo.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1617,7 +1625,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech4')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-blockchain-cryptomonnaies-afrique.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1630,7 +1638,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech5')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-technologie-agriculture-togolaise.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
 
@@ -1643,7 +1651,7 @@
             </div>
             <div class="blog-card-footer">
                 <span style="font-size:0.8rem;color:#aaa;">Honoré Yaovi</span>
-                <button class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;" onclick="openModal('tech6')">Lire la suite →</button>
+                <a class="btn btn-vert" style="padding:6px 18px;font-size:0.8rem;"  href="article-apprendre-code-ia-gratuitement.html" style="text-decoration:none;display:inline-block;">Lire la suite →</a>
             </div>
         </div>
     </div>
@@ -1657,231 +1665,6 @@
     </div>
 </div>
 
-<style>
-    .modal-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.75);
-        z-index: 2000;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        animation: fadeInUp 0.3s ease;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-box {
-        background: var(--blanc);
-        border-radius: 16px;
-        max-width: 750px;
-        width: 100%;
-        max-height: 88vh;
-        overflow-y: auto;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        animation: fadeInUp 0.4s ease both;
-    }
-    .modal-strip {
-        height: 6px;
-        border-radius: 16px 16px 0 0;
-        background: linear-gradient(to right, var(--vert), var(--jaune), var(--rouge));
-    }
-    .modal-header {
-        position: sticky;
-        top: 0;
-        background: var(--blanc);
-        padding: 20px 25px 15px;
-        border-bottom: 1px solid #eee;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        z-index: 10;
-    }
-    .modal-header h2 { font-size: 1.2rem; font-weight: 700; color: var(--noir); max-width: 85%; }
-    .modal-close {
-        background: #f0f0f0;
-        border: none;
-        border-radius: 50%;
-        width: 36px; height: 36px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        transition: background 0.3s;
-        flex-shrink: 0;
-    }
-    .modal-close:hover { background: var(--rouge); color: white; }
-    .modal-tag {
-        display: inline-block;
-        background: var(--vert);
-        color: white;
-        font-size: 0.7rem;
-        font-weight: 700;
-        padding: 3px 10px;
-        border-radius: 10px;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
-    }
-    .modal-content { padding: 25px; }
-    .modal-content p {
-        font-size: 0.95rem;
-        color: #444;
-        line-height: 1.9;
-        margin-bottom: 16px;
-    }
-    .modal-content h3 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--vert);
-        margin: 20px 0 8px;
-    }
-    .modal-author {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 25px;
-        border-top: 1px solid #eee;
-        font-size: 0.85rem;
-        color: #888;
-    }
-</style>
-<style>
-    @media (max-width: 600px) {
-        .modal-overlay { padding: 10px; }
-        .modal-box { max-height: 92vh; }
-        .modal-header { padding: 14px 16px 10px; }
-        .modal-header h2 { font-size: 1.02rem; line-height: 1.35; }
-        .modal-content { padding: 16px 18px; }
-        .modal-content p { font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px; text-align: left; }
-        .modal-content h3 { font-size: 1rem; margin: 16px 0 6px; }
-        .modal-author { padding: 12px 18px; }
-    }
-</style>
-<!-- Modales Tech & IA -->
-<div id="modal-tech1" class="modal-overlay" onclick="closeModalOutside(event,'tech1')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#0d47a1;">IA</span><h2>L'IA au service de l'Afrique</h2></div>
-            <button class="modal-close" onclick="closeModal('tech1')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>L'intelligence artificielle représente une révolution technologique sans précédent. Pour l'Afrique et le Togo en particulier, elle offre des opportunités uniques de développement accéléré.</p>
-            <h3>Agriculture intelligente</h3>
-            <p>Des systèmes d'IA analysent les images satellites pour détecter les maladies des cultures, prévoir les rendements et optimiser l'irrigation. Des startups comme Zenvus au Nigeria utilisent des capteurs et l'IA pour conseiller les agriculteurs en temps réel.</p>
-            <h3>Santé connectée</h3>
-            <p>L'IA aide à diagnostiquer des maladies dans des zones sans médecins. Des applications analysent des photos de peau pour détecter des infections, ou des radiographies pour identifier des tuberculoses. Au Togo, ces technologies pourraient transformer l'accès aux soins ruraux.</p>
-            <h3>Éducation personnalisée</h3>
-            <p>Des plateformes d'apprentissage adaptatif utilisent l'IA pour personnaliser l'enseignement selon le niveau de chaque élève. En Afrique subsaharienne, où les classes sont souvent surchargées, ces outils peuvent révolutionner la qualité de l'éducation.</p>
-            <h3>L'IA et le Togo</h3>
-            <p>Le Togo développe sa stratégie numérique. Des initiatives comme le hub d'innovation de Lomé et les incubateurs de startups montrent que le pays est prêt à embrasser l'IA comme levier de développement. La jeunesse togolaise, de plus en plus connectée, est le moteur de cette transformation.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<div id="modal-tech2" class="modal-overlay" onclick="closeModalOutside(event,'tech2')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#4527a0;">FINTECH</span><h2>La révolution mobile en Afrique de l'Ouest</h2></div>
-            <button class="modal-close" onclick="closeModal('tech2')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>L'Afrique est le continent du mobile banking. Là où les banques traditionnelles n'ont pas su atteindre les populations rurales, les services financiers mobiles ont créé une révolution silencieuse.</p>
-            <h3>M-Pesa : le pionnier</h3>
-            <p>Lancé au Kenya en 2007, M-Pesa permet d'envoyer et recevoir de l'argent, payer des factures et épargner via un simple téléphone. Aujourd'hui, plus de 50 millions d'utilisateurs en Afrique utilisent ce service.</p>
-            <h3>Moov Money au Togo</h3>
-            <p>Au Togo, Moov Money et Flooz (TMoney) ont transformé la vie quotidienne. Payer son électricité, envoyer de l'argent à sa famille au village ou régler ses achats au marché se fait désormais en quelques secondes depuis son téléphone.</p>
-            <h3>L'avenir : les superapps</h3>
-            <p>Les prochaines années verront émerger des superapps africaines combinant paiement, commerce, messagerie et services gouvernementaux. Le Togo, avec son programme Togo Digital, est bien positionné pour devenir un hub fintech régional.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<div id="modal-tech3" class="modal-overlay" onclick="closeModalOutside(event,'tech3')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#00695c;">WEB</span><h2>Construire sa présence numérique au Togo</h2></div>
-            <button class="modal-close" onclick="closeModal('tech3')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>Avoir une présence numérique est devenu indispensable pour tout entrepreneur, artiste ou professionnel togolais. Un site web bien conçu peut ouvrir des portes sur le monde entier.</p>
-            <h3>Par où commencer ?</h3>
-            <p>Commencez par apprendre les bases : HTML, CSS et JavaScript sont les fondations du web. Des plateformes gratuites comme freeCodeCamp, OpenClassrooms ou W3Schools permettent d'apprendre à son rythme depuis un téléphone ou un ordinateur.</p>
-            <h3>Les outils modernes</h3>
-            <p>Des outils comme WordPress, Wix ou Webflow permettent de créer des sites professionnels sans code. Pour les entrepreneurs togolais, ces plateformes offrent des solutions rapides et économiques pour établir leur présence en ligne.</p>
-            <h3>Monétiser ses compétences</h3>
-            <p>Un développeur web togolais peut travailler pour des clients du monde entier via des plateformes comme Upwork, Fiverr ou Toptal. Les compétences numériques sont parmi les mieux rémunérées à l'échelle mondiale, offrant une voie vers l'indépendance financière.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<div id="modal-tech4" class="modal-overlay" onclick="closeModalOutside(event,'tech4')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#e65100;">CRYPTO</span><h2>Blockchain et cryptomonnaies en Afrique</h2></div>
-            <button class="modal-close" onclick="closeModal('tech4')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>La blockchain est une technologie de registre distribué qui permet des transactions sécurisées sans intermédiaire. Pour l'Afrique, elle représente une opportunité de contourner les institutions traditionnelles défaillantes.</p>
-            <h3>Transferts d'argent sans frais</h3>
-            <p>La diaspora africaine envoie plus de 50 milliards de dollars par an en Afrique, mais perd jusqu'à 10% en frais de transfert. Les cryptomonnaies permettent d'envoyer de l'argent instantanément et presque gratuitement, révolutionnant les transferts diaspora-famille.</p>
-            <h3>Protection de la propriété foncière</h3>
-            <p>La blockchain peut sécuriser les titres fonciers au Togo, où les litiges de terrain sont fréquents. Des pays comme le Ghana expérimentent des registres fonciers blockchain pour protéger les droits des propriétaires contre la corruption et les fraudes.</p>
-            <h3>Traçabilité agricole</h3>
-            <p>Des startups utilisent la blockchain pour tracer le parcours des produits agricoles africains (cacao, café, karité) du champ au consommateur européen. Cela permet de certifier l'authenticité, d'améliorer les prix et de lutter contre les fraudes.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<div id="modal-tech5" class="modal-overlay" onclick="closeModalOutside(event,'tech5')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#1b5e20;">AGROTECH</span><h2>La technologie au service de l'agriculture togolaise</h2></div>
-            <button class="modal-close" onclick="closeModal('tech5')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>L'agriculture représente 40% du PIB togolais et emploie 60% de la population active. La technologie peut multiplier les rendements et les revenus des agriculteurs tout en réduisant les impacts environnementaux.</p>
-            <h3>Drones agricoles</h3>
-            <p>Des drones équipés de capteurs multispectraux permettent de détecter les maladies des cultures, cartographier les parcelles et effectuer des traitements ciblés. Au Togo, des projets pilotes montrent des économies d'intrants de 30 à 40%.</p>
-            <h3>Applications météo et marchés</h3>
-            <p>Des applications comme Farmerline et Esoko fournissent aux agriculteurs togolais les prévisions météo, les prix du marché en temps réel et des conseils agronomiques personnalisés directement sur leurs téléphones mobiles.</p>
-            <h3>Marchés numériques</h3>
-            <p>Des plateformes comme Jumia Food et des marchés locaux numériques permettent aux agriculteurs de vendre directement aux consommateurs, éliminant les intermédiaires et augmentant leurs marges de 20 à 50%.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<div id="modal-tech6" class="modal-overlay" onclick="closeModalOutside(event,'tech6')">
-    <div class="modal-box">
-        <div class="modal-strip"></div>
-        <div class="modal-header">
-            <div><span class="modal-tag" style="background:#c62828;">ÉDUCATION</span><h2>Apprendre le code et l'IA gratuitement</h2></div>
-            <button class="modal-close" onclick="closeModal('tech6')">✕</button>
-        </div>
-        <div class="modal-content">
-            <p>L'accès au savoir numérique n'a jamais été aussi démocratisé. Un jeune Togolais avec un téléphone et une connexion internet peut aujourd'hui apprendre les mêmes compétences qu'un étudiant de Stanford.</p>
-            <h3>Plateformes gratuites recommandées</h3>
-            <p><strong>freeCodeCamp</strong> — Développement web complet (HTML, CSS, JavaScript, Python) avec certification gratuite.<br/>
-            <strong>Khan Academy</strong> — Mathématiques, sciences et programmation pour tous niveaux.<br/>
-            <strong>Coursera / edX</strong> — Cours des meilleures universités mondiales, souvent gratuits en audit.<br/>
-            <strong>Google Digital Skills for Africa</strong> — Formation numérique spécialement conçue pour l'Afrique.</p>
-            <h3>Apprendre l'IA</h3>
-            <p>Fast.ai propose des cours d'apprentissage automatique pratiques et gratuits. Google offre des certifications en machine learning. Ces compétences sont parmi les plus recherchées et les mieux rémunérées au monde.</p>
-            <h3>Construire un portfolio</h3>
-            <p>Créer des projets concrets, les publier sur GitHub, contribuer à des projets open source — voilà comment un développeur togolais peut se faire remarquer par des employeurs du monde entier et construire une carrière internationale depuis Lomé ou Kamina.</p>
-        </div>
-        <div class="modal-author"> Par <strong style="color:var(--noir);">Honoré Yaovi</strong> — Kamina, TOGO</div>
-    </div>
-</div>
-
-<!-- ===== PAGE SCIENCES ===== -->
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -2039,7 +1822,7 @@
 
     // Marquer le lien actif du menu selon la page courante
     (function () {
-        const cur = window.location.pathname.split('/').pop() || 'index.html';
+        const cur = document.body.getAttribute('data-parent') || window.location.pathname.split('/').pop() || 'index.html';
         document.querySelectorAll('nav a, .nav-mobile a').forEach(a => {
             a.classList.remove('active');
             if (a.getAttribute('href') === cur) a.classList.add('active');
