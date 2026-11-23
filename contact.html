@@ -1486,6 +1486,10 @@
 .chat-send-btn{min-width:38px}
 .chat-header-info div span::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:#4cd964;margin-right:6px}
 @media (max-height:560px){#chat-box{bottom:84px;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px)}#chat-box .chat-suggestions{display:none}}
+.nav-dropdown-menu{position:fixed;top:60px;right:12px;max-width:calc(100vw - 16px)}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown-menu:hover{display:none}
+.nav-dropdown.open .nav-dropdown-menu{display:block}
+.nav-dropdown-btn.active,.nav-dropdown.open .nav-dropdown-btn{background:var(--jaune);color:var(--noir)}
 .hero-cover{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.32;z-index:0;display:block}
 .hero>*:not(.hero-cover){position:relative;z-index:1}
 .menu-panel{padding-bottom:70px}
@@ -1815,6 +1819,32 @@
             a.classList.remove('active');
             if (a.getAttribute('href') === cur) a.classList.add('active');
         });
+    })();
+
+    // Menu « Plus » : s'ouvre au toucher / clic (position fixe pour ne pas être coupé par la barre)
+    (function () {
+        var dd = document.querySelector('.nav-dropdown');
+        if (!dd) return;
+        var btn = dd.querySelector('.nav-dropdown-btn'), menu = dd.querySelector('.nav-dropdown-menu'), bar = document.querySelector('nav');
+        if (!btn || !menu) return;
+        btn.setAttribute('aria-expanded', 'false');
+        if (menu.querySelector('a.active')) btn.classList.add('active');
+        function place() {
+            var r = btn.getBoundingClientRect();
+            menu.style.top = (r.bottom + 8) + 'px';
+            menu.style.right = Math.max(8, window.innerWidth - r.right) + 'px';
+        }
+        function close() { dd.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = dd.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (open) place();
+        });
+        document.addEventListener('click', function (e) { if (!dd.contains(e.target)) close(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        window.addEventListener('resize', function () { if (dd.classList.contains('open')) place(); });
+        if (bar) bar.addEventListener('scroll', function () { if (dd.classList.contains('open')) place(); });
     })();
 
     // Formulaire de contact : ouvre l'application e-mail
